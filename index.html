@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pariva - Showcase Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hidden {
+            display: none;
+        }
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+
+        #toast.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @-webkit-keyframes fadein {
+            from {bottom: 0; opacity: 0;} 
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @-webkit-keyframes fadeout {
+            from {bottom: 30px; opacity: 1;} 
+            to {bottom: 0; opacity: 0;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Pariva</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" id="aboutLink">About Me</a></li>
+                <li><a href="#" id="contactLink">Contact</a></li>
+            </ul>
+            <button id="btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section id="landingPage">
+        <div class="s-container">
+            <div class="content">
+                <span class="subtitle">Welcome to my Showcase Portfolio</span>
+                <h1 class="title">I'm a <span>Dedicated <br></span>Software Engineer</h1>
+                <p class="description">
+                    I'm a passionate and innovative Front End developer, leveraging my background as a Computer Science graduate from Pace University in New York. With a keen eye for detail and a dedication to user-centric design principles, I specialize in crafting captivating and user-friendly digital experiences.
+                    <br> </br>
+                    Throughout my academic and professional journey, I have honed my skills in design theory, human-computer interaction, and cutting-edge technologies to create meaningful and impactful designs. From my master's program to hands-on projects, I have immersed myself in the world of Software, constantly pushing the boundaries of creativity and innovation.
+                </p>
+                <div class="buttons">
+                    <a href="mailto:pl95534n@pace.edu?subject=Job Opportunity&body=Hello, I'm interested in discussing potential job opportunities with you.">Hire Me</a>
+                    <button id="projectsBtn">Projects</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="./Graduation_pic.jpg" alt="pariva">
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutPage" class="hidden">
+        <div class="s-container">
+            <div class="description">
+                <div class="textbox">
+                    <p><b>W"Welcome to my Showcase Portfolio! I'm Pariva, a dedicated and passionate Front End Developer with a Master’s degree in Computer Science from Pace University in New York."</b></p>
+                    <p>With a strong foundation in both design and technology, I specialize in creating captivating and user-friendly digital experiences.</p>
+                    <p>I had the opportunity to intern at <u>Shoptaki</u>, a prominent private organization based in New York City. Over the course of six months, I worked as a <u>Software Developer</u>, contributing to the innovative <u>Smart ID team</u>. This experience allowed me to apply my technical skills in a dynamic environment, collaborate with seasoned professionals, and play a key role in developing advanced identification solutions.</p>
+                    <p>During my time at university, I immersed myself in the world of software development, focusing on design theory, human-computer interaction, and cutting-edge technologies. My academic journey equipped me with the skills to craft meaningful and impactful designs, blending creativity with technical precision to become a Software Engineer.</p>
+                    <p>Professionally, I have worked on various projects that have challenged and honed my abilities. From building responsive websites to developing interactive web applications, I strive to push the boundaries of creativity and innovation in every project I undertake.</p>
+                    <p>My core skills include <u>HTML, CSS, JavaScript, React, Angular, and I am proficient in tools such as Git, Figma, and Adobe Creative Suite.</u> I am committed to staying updated with the latest industry trends and continuously improving my craft.</p>
+                    <p>Outside of work, I enjoy exploring new technologies, reading about UX design, and contributing to open-source projects. I believe in the power of community and am always eager to collaborate with like-minded individuals.</p>
+                    <p>Feel free to reach out to me for potential job opportunities, collaborations, or just to connect. Let's create something amazing together!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="projectsPage" class="hidden">
+    <div class="s-container">
+        <h1>My Projects</h1>
+        <div class="project-list">
+            <!-- Add your project details here -->
+            <div class="project-item">
+                <div class="project-content">
+                    <h3>BARGAIN HUNTER</h3>
+                    <p>Bargain Hunter is an innovative accommodation and item exchange platform built using React, Spring Boot, and MongoDB. It allows users to find affordable housing options and trade various items effortlessly.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-content">
+                    <h3>PHRONTISTERY OVERSEE</h3>
+                    <p>Phrontistery Oversee is a comprehensive student management system developed using the MEAN stack (MongoDB, Express.js, Angular, and Node.js). Designed to streamline administrative tasks.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-content">
+                    <h3>NETFLIX CLONE</h3>
+                    <p>A Netflix clone built with React.js, Firebase, and MongoDB involves setting up a React project with Firebase authentication and Firestore for data storage. Additionally, you'd integrate MongoDB for backend data storage.</p>
+                </div>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </div>
+</section>
+
+
+    <section id="contactPage" class="hidden">
+        <div class="s-container">
+            <h2>Contact Me</h2>
+            <p>If you have any questions, job opportunities, or just want to say hi, feel free to reach out! I'm always open to new collaborations and connections.</p>
+            <div class="contact-form">
+                <form action="https://formspree.io/forms" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" id="sendMessageButton" onclick="sendMessage()"><b>Send Email</b></button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <p>You can also reach me at::-</p><br>
+                <p>Email: <a href="mailto:pl95534n@pace.edu">pl95534n@pace.edu</a></p><br>
+                <p>Phone: <a href="tel:+1234567890">+1 (516)-297-9057</a></p><br>
+                <p>Location: New York, NY</p><br>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/parivadhir" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+                    <a href="https://github.com/pariva123" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div id="toast">Message sent successfully!</div> <!-- Toast container -->
+    </section>
+
+    <script>
+        document.getElementById('projectsBtn').addEventListener('click', () => {
+            document.getElementById('landingPage').style.display = 'none';
+            document.getElementById('aboutPage').style.display = 'none';
+            document.getElementById('contactPage').style.display = 'none';
+            document.getElementById('projectsPage').style.display = 'block';
+        });
+
+        document.getElementById('aboutLink').addEventListener('click', () => {
+            document.getElementById('landingPage').style.display = 'none';
+            document.getElementById('projectsPage').style.display = 'none';
+            document.getElementById('contactPage').style.display = 'none';
+            document.getElementById('aboutPage').style.display = 'block';
+        });
+
+        document.getElementById('contactLink').addEventListener('click', () => {
+            document.getElementById('landingPage').style.display = 'none';
+            document.getElementById('projectsPage').style.display = 'none';
+            document.getElementById('aboutPage').style.display = 'none';
+            document.getElementById('contactPage').style.display = 'block';
+        });
+
+        function sendMessage() {
+            // Get form input values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            var mailtoUrl = 'mailto:pl95534n@pace.edu' +
+                '?subject=' + encodeURIComponent('Message from ' + name) +
+                '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+
+            // Navigate to the mailto URL
+            window.location.href = mailtoUrl;
+
+            // Show toast notification
+            var toast = document.getElementById('toast');
+            toast.className = 'show';
+            setTimeout(function () {
+                toast.className = toast.className.replace('show', '');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
+
